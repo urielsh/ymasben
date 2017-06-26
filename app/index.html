@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="ymasben" lang="he">
+<head>
+  <!-- SCROLLS -->
+  <!-- load bootstrap and fontawesome via CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- load angular via CDN -->
+    <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <!--<link href='bower_components/fullcalendar/dist/scheduler.css' rel='stylesheet' />-->
+
+  <!-- bootstrap - jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- google auth -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="266111797938-1junfbr6ihrmn6vadrs89kks6c49fno8.apps.googleusercontent.com">
+  <script src="bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+  <script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+  <!--<script src='bower_components/fullcalendar/dist/scheduler.js'></script>-->
+  <!-- SPELLS -->
+  <!--<link rel="stylesheet" href="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.css">-->
+  <!--//<script src="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.js"></script>-->
+  <!-- calendar -->
+  <script src='bower_components/moment/min/moment.min.js'></script>
+  <script src='bower_components/angular-ui-calendar/src/calendar.js'></script>
+  <script src='bower_components/angular-translate/angular-translate.js'> </script>
+  <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
+  <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.js"></script>
+
+  <!--Translate-->
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+
+  <!--app scripts-->
+  <script src="components/manager/management/usersController.js"></script>
+  <script src="components/manager/managerController.js"></script>
+  <script src="components/User/userViewController.js"></script>
+  <script src="components/classes/classesController.js"></script>
+  <script src="components/login/loginController.js"></script>
+  <script src="components/membership/membershipController.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+<!-- HEADER AND NAVBAR -->
+<header >
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/" >איינגר יוגה עם אגי - מערכת ניהול סטודיו</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right" >
+        <li><a href="#home"><i class="fa fa-home"></i>בית</a></li>
+        <li><a href="#courses"><i class="fa fa-shield"></i>אודות</a></li>
+        <li><a href="#students"><i class="fa fa-comment"></i>צור קשר</a></li>
+        <li><a data-toggle="dropdown">מרכז ניהול
+          <span class="caret"></span>
+
+          <ul class="dropdown-menu">
+            <li><a href="#manager">ראשי</a></li>
+            <li><a href="#users">משתמשים</a></li>
+            <li><a href="#classes">שיעורים</a></li>
+          </ul>
+        </a>
+        </li>
+
+
+
+
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+<div id="main">
+
+  <!-- angular templating -->
+  <!-- this is where content will be injected -->
+  <div ng-view></div>
+
+</div>
+</body>
+</html>
