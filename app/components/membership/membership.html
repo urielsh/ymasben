@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<script>src="app/components/membership/membershipController.js"</script>
+<div ng-controller="membershipCtrl">
+<table >
+    <thead>
+    <tr>
+        <th>{{'NAME'|translate}}</th>
+        <th>{{'MEMBERSHIP_TYPE'|translate}}</th>
+        <th>{{'EXPIRE'|translate}}</th>
+        <th>{{'CHECK'|translate}}</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="member in members">
+         <tr>{{member.name}}</tr>
+         <tr>{{member.membershiptype}}</tr>
+         <tr>{{member.membershipexpiration | date:'dd/MM'}}</tr>
+         <tr ng-click="getindex($index)">X</tr>
+    </tbody>
+</table>
 
-</body>
-</html>
+
+<div class="addButton" ng-click="createNew()">
+
+</div>
+    <div class="newMembership">
+        <input type="text" ng-model="membershiptype">
+        <input type="date" ng-model="expiration">
+    </div>
+</div>

@@ -1,4 +1,4 @@
-angular
+angular.module('yoga')
     .controller('contactCtrl', ['$scope',
         function contactControllerFunc($scope)
         {

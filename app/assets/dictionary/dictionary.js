@@ -1,4 +1,4 @@
-angular.module('ymasben').config(['$translateProvider', function ($translateProvider) {
+angular.module('yoga').config(['$translateProvider', function ($translateProvider) {
     $translateProvider.translations('he', {
         'TITLE': 'איננגר יוגה עם אגי',
         'MANAGER': 'מנהל',
@@ -7,7 +7,8 @@ angular.module('ymasben').config(['$translateProvider', function ($translateProv
         'EXPIRE': 'תפוגת מנוי',
         'SEMINAR': 'סמינר',
         'LINKEDIN':'הכנס עם לינקדאין',
-        'FACEBOOK':'הכנס עם פייסבוק'
+        'FACEBOOK':'הכנס עם פייסבוק',
+        'MANAGEMENT_CONSOL':'מערכת ניהול'
     });
 
     $translateProvider.translations('en', {
@@ -18,7 +19,8 @@ angular.module('ymasben').config(['$translateProvider', function ($translateProv
         'EXPIRE': 'Expiration Date',
         'SEMINAR': 'seminar',
         'LINKEDIN':'LinkedIn Login',
-        'FACEBOOK':'Facebook Login'
+        'FACEBOOK':'Facebook Login',
+        'MANAGEMENT_CONSOL': 'Management Consol '
     });
 
     $translateProvider.translations('fr', {
@@ -29,7 +31,8 @@ angular.module('ymasben').config(['$translateProvider', function ($translateProv
         'EXPIRE': 'date d\'expiration',
         'SEMINAR': 'colloque',
         'LINKEDIN':'Connexion de LinkedIn',
-        'FACEBOOK':'Connexion de Facebook'
+        'FACEBOOK':'Connexion de Facebook',
+        'MANAGEMENT_CONSOL': 'Management Consol'
 
     });
 

@@ -1,4 +1,4 @@
-angular.module('ymasben').controller(['userViewCtrl',
+angular.module('yoga').controller('userViewCtrl',['socialLogin',
     function ($scope) {
     $scope.user =
         {
@@ -10,4 +10,5 @@ angular.module('ymasben').controller(['userViewCtrl',
             membershiptype:0,    // not a member
             membershipexpiration:date
         }
-}])
+
+}]);

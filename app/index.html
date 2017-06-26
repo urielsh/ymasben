@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <!-- define angular app -->
-<html ng-app="ymasben" lang="he">
-<head>
+<html lang="he">
+<head ng-app="yoga">
   <!-- SCROLLS -->
   <!-- load bootstrap and fontawesome via CDN -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,23 +11,26 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
+    <!-- bootstrap - jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
   <!-- load angular via CDN -->
     <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css" rel="stylesheet">
   <!--<link href='bower_components/fullcalendar/dist/scheduler.css' rel='stylesheet' />-->
 
-  <!-- bootstrap - jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css" rel="stylesheet">
+
 
   <!-- google auth -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="266111797938-1junfbr6ihrmn6vadrs89kks6c49fno8.apps.googleusercontent.com">
   <script src="bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
   <script src="bower_components/angularjs-social-login/angularjs-social-login.js"></script>
+
+
   <!--<script src='bower_components/fullcalendar/dist/scheduler.js'></script>-->
   <!-- SPELLS -->
   <!--<link rel="stylesheet" href="https://rawgit.com/esvit/ng-table/master/dist/ng-table.min.css">-->
@@ -38,23 +41,25 @@
   <script src='bower_components/angular-translate/angular-translate.js'> </script>
   <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.min.js"></script>
   <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.js"></script>
-
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
   <!--Translate-->
   <script src="bower_components/angular-translate/angular-translate.js"></script>
 
   <!--app scripts-->
-  <script src="components/manager/management/usersController.js"></script>
+  <script src="components/manager/users/usersController.js"></script>
   <script src="components/manager/managerController.js"></script>
   <script src="components/User/userViewController.js"></script>
   <script src="components/classes/classesController.js"></script>
   <script src="components/login/loginController.js"></script>
   <script src="components/membership/membershipController.js"></script>
-  <script src="script.js"></script>
-
+    <script src="components/register/registerController.js"></script>
+    <script src="components/manager/contact/contactController.js"></script>
+    <script src="script.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController">
+<body ng-controller="loginCtrl">
 
 <!-- HEADER AND NAVBAR -->
 <header >

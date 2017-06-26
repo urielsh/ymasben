@@ -1,34 +1,36 @@
-angular.module('ymasben').controller('managerCtrl',['$scope','uiCalendar',function ($scope,uiCalendar) {
-    'use strict';
-    $scope.changeMode = function (mode) {
-        $scope.mode = mode;
-    };
+angular.module('yoga')
+    .controller('managerCtrl',['$scope',
+        function ($scope) {
+            'use strict';
+            $scope.changeMode = function (mode) {
+                $scope.mode = mode;
+            };
 
-    $scope.today = function () {
-        $scope.currentDate = new Date();
-    };
+            $scope.today = function () {
+                $scope.currentDate = new Date();
+            };
 
-    $scope.isToday = function () {
-        var today = new Date(),
-            currentCalendarDate = new Date($scope.currentDate);
+            $scope.isToday = function () {
+                var today = new Date(),
+                    currentCalendarDate = new Date($scope.currentDate);
 
-        today.setHours(0, 0, 0, 0);
-        currentCalendarDate.setHours(0, 0, 0, 0);
-        return today.getTime() === currentCalendarDate.getTime();
-    };
+                today.setHours(0, 0, 0, 0);
+                currentCalendarDate.setHours(0, 0, 0, 0);
+                return today.getTime() === currentCalendarDate.getTime();
+            };
 
-    $scope.loadEvents = function () {
-        $scope.eventSource = createRandomEvents();
-    };
+            $scope.loadEvents = function () {
+                $scope.eventSource = createRandomEvents();
+            };
 
-    $scope.onEventSelected = function (event) {
-        $scope.event = event;
-    };
+            $scope.onEventSelected = function (event) {
+                $scope.event = event;
+            };
 
-    $scope.onTimeSelected = function (selectedTime, events) {
-        console.log('Selected time: ' + selectedTime + ' hasEvents: ' + (events !== undefined && events.length !== 0));
-    };
-},
+            $scope.onTimeSelected = function (selectedTime, events) {
+                console.log('Selected time: ' + selectedTime + ' hasEvents: ' + (events !== undefined && events.length !== 0));
+            };
+        },
         function createRandomEvents() {
             var events = [];
             for (var i = 0; i < 50; i += 1) {
@@ -65,5 +67,5 @@ angular.module('ymasben').controller('managerCtrl',['$scope','uiCalendar',functi
             }
             return events;
         }
-        ])
+    ]);
 
